@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">P2D - Atendimento</a>
+        <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Aereo
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                            data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#aereoVendas">Vendas</a>
+                                <a class="nav-link" href="#aereoServicosEspeciais">Servicos Especiais</a>
+                                <a class="nav-link" href="#aereoPassageirosEspeciais">Passageiros Especiais</a>
+                                <a class="nav-link" href="#aereoBagagem">Bagagem</a>
+                                <a class="nav-link" href="#aereoPoliticas">Politicas</a>
+
+                            </nav>
+                        </div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            Hotel
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link" href="#hotelVendas">Vendas</a>
+                                <a class="nav-link" href="#hotelPoliticas">Politicas</a>
+                            </nav>
+                        </div>
+
+                        <div class="sb-sidenav-menu-heading">ADM</div>
+                        <a class="nav-link" href="#admFaturamento">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Faturamento
+                        </a>
+                        <a class="nav-link" href="#admSuporte">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Suporte
+                        </a>
+                        <a class="nav-link" href="#admContato">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Contato
+                        </a>
+                        <a class="nav-link" href="#admfaq">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            FAQ
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Central P2D
+                </div>
+            </nav>
+        </div>
+        <!--Inicio do conteudo - Portao do Conhecimento-->
+        <div class="container" id="conteudo">
+            <section class="main-section" id="aereoVendas">
+                <article>
+                    <header>Aereo Vendas A001</header>
+                    <p>A001001 Reservas
+                        As reservas são feitas apenas pelo parceiro ou diretamente pelo cliente dentro da sua
+                        agência.
+                        <u>Não fazemos reservas pelo Call Center.</u>
+                    </p>
+                    <header>A001002 Emissão</header>
+                    <p>As emissões são feitas pelo parceiro ou diretamente pelo cliente dentro da sua agência.
+                        Situações em que não for possível emissão online, verificar situação e reportar ao Ti.
+                        <u>(Nesse caso prosseguiremos com a emissão pelo nosso call center)</u>
+                        * Reportar para Pablo e Tallita emissões realizadas na Aerticket
+                    </p>
+                    <header>A001003 Alteração de bilhetes</header>
+                    <p>
+                        É quando o passageiro deseja alterar datas ou trechos, após emissão do bilhete.
+                    </p>
+                    <h6>Realizado pelo Call Center.
+                    </h6>
+                    <ul>
+                        <ol>Não é possível alterar nome e nem companhia aérea.</ol>
+                        <ol>A simulação é realizada na plataforma onde o bilhete foi emitido</ol>
+                    </ul>
+                    <h6>Para alteração, seguir os passos abaixo:</h6>
+                    <li>Consultar regra da tarifa (A informação está na própria reserva)</li>
+                    <li>Fazer simulação na AerTicket (Consultar diferença de tarifa e penalidades aplicadas)</li>
+                    <li>Informar ao cliente custo da alteração</li>
+                    <li>Aguardar confirmação do cliente/parceiro para prosseguir com alteração</li>
+                    <li>Após confirmação do cliente, enviar link para pagamento</li>
+                    <li>Cliente efetua o pagamento</li>
+                    <li>Prosseguimos com alteração</li>
+                    <li>Conferir todos os dados (voos/trecho/data/nome) após reemissão</li>
+                    <li>Enviar para Pablo (TI) e Tallita todas as alterações realizadas</li>
+                    <br>
+                    <header>A001004 Perfil de tarifas</header>
+                    <p>Cada companhia tem o seu perfil de tarifa, onde é possível visualizar na própria cotação.
+                        Esse perfil menciona sobre franquia de bagagem, taxa de remarcação e multas para reembolso,
+                        assim como pontuação nos programas de fidelidade, embarques prioritários e assentos.
+                    </p>
+                    <h6>Para as cias nacionais, segue link para visualizar os perfis:</h6>
+                    <ul>
+                        <li><a href="https://www.latam.com/pt_br/planeje-e-compre/conheca-os-perfis-de-tarifas/perfis-de-tarifas-nacionais/"
+                                target="_blank">LATAM</a>
+                        </li>
+                        <ol>TOP</ol>
+                        <ol>Flex</ol>
+                        <ol>Basic</ol>
+                        <li><a href="https://www.voeazul.com.br/para-sua-viagem/informacoes-para-viajar/remarcacao--cancelamento"
+                                target="_blank">Azul</a>
+                        </li>
+                        <ol>Mais Azul</ol>
+                        <ol>Azul</ol>
+                        <li><a href="https://www.voegol.com.br/pt/informacoes/tarifas" target="_blank">Gol</a></li>
+                        <ol>Max</ol>
+                        <ol>Plus</ol>
+                        <ol>Light</ol>
+                        <ol>Promo</ol>
+                    </ul>
+                    <h6><u>Para as cias internacionais</u> é possível consultar no site da empresa aérea, ou no Portal
+                        da AerTicket.</h6>
+
+                    <header>A001005 Correção de nome</header>
+                    <li>Na reserva – será necessário fazer uma nova reserva com o nome correto. </li>
+                    <li>No bilhete – correções apenas de letras onde não altera a fonética do nome.</li>
+                    <ol>(Ex: Luiz / Luis)</ol>
+                    <p>Para essas situações é necessário entrar em contato com o fornecedor do bilhete (AerTicket ou Cia
+                        Aérea)</p>
+
+                    <header>A001006 Reembolso</header>
+                    <p>É quando o passageiro deseja estorno do valor pago.</p>
+                    <p>É possível consultar regras e solicitar on-line pela agência do parceiro.</p>
+                    <li>Casos em que não for possível on-line, o atendente deve verificar as regras do bilhete (se
+                        permite reembolso), e repassar a informação ao cliente.</li>
+                    <li>Caso o cliente solicite reembolso de forma off-line, abrir Task para prosseguir com solicitação.
+                    </li>
+                    <p>Faremos o processo do reembolso na AerTicket.</p>
+                    <p>Enviar e-mail com protocolo para Marcela e Tallita.</p>
+
+                    <header>A001007 Crédito</header>
+                    <p>Quando o cliente tem um crédito e deseja utilizá-lo com pagamento de um novo bilhete.</p>
+                    <li>Os créditos não podem ser endossáveis para outra pessoa e nem para outra companhia aérea</li>
+                    <li>Utilizamos créditos apenas de bilhetes emitidos dentro da nossa plataforma.</li>
+                    <li>Para essas situações é necessário emissão de bilhete através do nosso Call Center.</li>
+                    <p>Faremos a emissão no portal da AerTicket ou da cia aérea (o bilhete deve ser reemitido com o
+                        fornecedor do bilhete original).</p>
+                </article>
+                <br>
+            </section>
+            <section class="main-section" id="aereoServicosEspeciais">
+                <article>
+                    <header>A002001 Refeições Especiais</header>
+                    <p><strong>Algumas cias/voos não tem esse serviço</strong></p>
+                    <li>Apenas para voos internacionais de longa duração. (Acima de 4 horas)</li>
+                    <li>Solicitar junto a AerTicket (dentro da reserva na opção Osi / SSR Especiais)</li>
+                    <br>
+                    <header>A002002 Animais na Cabine (PETC)</header>
+                    <p>O serviço deve ser solicitado no momento da emissão e até 48 horas antes da saída do voo. </p>
+                    <p>O serviço é apenas para animais de estimação pequenos (cães e gatos).</p>
+                    <li>Consultar se o destino e voo permite animais na cabine</li>
+                    <li>Consultar disponibilidade</li>
+                    <li>Consultar valores</li>
+                    <p>Todas as consultas devem ser diretamente com o emissor do bilhete (AerTicket ou Cia Aérea)</p>
+                    <h6>Informações PETC, companhias nacionais</h6>
+                    
+                    <ul style="display:inline-flex">
+                        <ol><a href="https://www.voeazul.com.br/para-sua-viagem/informacoes-para-viajar/pet-na-cabine">Azul</a></ol>
+                        <ol><a href="https://www.voegol.com.br/pt/informacoes/viaje-sem-duvidas/transporte-de-animais-de-estimacao">Gol</a></ol>
+                        <ol><a href="https://www.latamtrade.com/pt_br/procom/animais_cabine_petc">Latam</a></ol>
+
+                    </ul>
+
+
+
+
+                </article>
+
+            </section>
+        </div>
+
+        <!--Fim-->
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/datatables-demo.js"></script>
+</body>
+
+</html>
